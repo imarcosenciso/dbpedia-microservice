@@ -1,0 +1,8 @@
+SELECT *
+WHERE
+{
+    ?place    rdfs:label "Bufones de Pría"@es .
+    ?place    dbo:abstract ?abstract
+
+    FILTER ( LANG ( ?abstract ) = 'es')
+}
