@@ -18,7 +18,7 @@ app.get('/:name', (req, res) => {
     .then( (result) => {
         var desc = JSON.stringify(result.results.bindings[0].abstract.value)
         res.send(desc);
-        console.log('Description found. Lenght: ' + desc.length)
+        console.log('Description found (Lenght: ' + desc.length + '). Description:\n' + desc)
     })
     .catch( (error) => {
         console.error("Error: " + error)
